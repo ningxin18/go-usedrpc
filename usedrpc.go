@@ -441,10 +441,10 @@ func (rpc *UseRPC) UseSendTransaction(transaction T) (string, error) {
 	return hash, err
 }
 
-func (rpc *UseRPC) SendCreditRegisterTransaction(transaction T) (string, error) {
+func (rpc *UseRPC) SendCreditRegisterTransaction(transaction T, enc bool) (string, error) {
 	var hash string
 
-	err := rpc.call("eth_sendCreditRegisterTransaction", &hash, transaction)
+	err := rpc.call("eth_sendCreditRegisterTransaction", &hash, transaction, enc)
 	return hash, err
 }
 
