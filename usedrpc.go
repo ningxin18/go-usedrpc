@@ -448,9 +448,6 @@ func (rpc *UseRPC) SendCreditRegisterTransaction(transaction T, enc bool) (strin
 	return hash, err
 }
 
-
-
-
 // UseSendRawTransaction creates new message call transaction or a contract creation for signed transactions.
 func (rpc *UseRPC) UseSendRawTransaction(data string) (string, error) {
 	var hash string
